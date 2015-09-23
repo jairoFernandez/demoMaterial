@@ -4,8 +4,80 @@
     android:layout_height="match_parent"
     tools:context="net.tucompualdia.ajuste.fragments.CalculatorFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="Hola desde calcu" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Total:  $...  "
+                    android:id="@+id/textView2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:id="@+id/tvTotal" />
+            </LinearLayout>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spLamina"
+                android:layout_gravity="center_horizontal"
+                android:spinnerMode="dropdown" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/etAncho"
+                android:layout_gravity="center_horizontal"
+                android:hint="ancho cm" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/etAlto"
+                android:layout_gravity="center_horizontal"
+                android:hint="alto cm" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calcular"
+                android:id="@+id/btnCalcular"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="163dp"
+            android:id="@+id/lvResultados"
+            android:layout_gravity="bottom" />
+    </LinearLayout>
 
 </FrameLayout>
